@@ -1,34 +1,30 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Welcome to Vue</title>
-</head>
-<body>
-  <div id="app">
-    <img src="https://vuejs.org/images/logo.png" alt="Vue logo">
-    <h1>{{ greeting }}</h1>
-    <ul>
-      <li>
-        To learn more about Vue, visit
-        <a v-bind:href="docsURL" target="_blank">
-          {{ humanizeURL(docsURL) }}
-        </a>
-      </li>
-      <li>
-        For live help with simple questions, check out
-        <a v-bind:href="gitterURL" target="_blank">
-          the Gitter chat
-        </a>
-      </li>
-      <li>
-        For more complex questions, post to
-        <a v-bind:href="forumURL" target="_blank">
-          the forum
-        </a>
-      </li>
-    </ul>
-  </div>
-  <script src="node_modules/steal/steal.js"></script>
+<html lang="en">
+  <meta>
+    <meta charset="UTF-8">
+    <title>Hello World in Vue.js</title>
+  </meta>
 
-</body>
+  <body>
+	
+    <div id="hello-world-app">
+      <h1>{{ msg }}</h1>
+    </div>
+
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js">
+    </script>
+
+    <script>
+      new Vue({
+        el: "#hello-world-app",
+        data() {
+          return {
+            msg: "Hello World!"
+          }
+        }
+      });
+    </script>
+
+  </body>
 </html>
